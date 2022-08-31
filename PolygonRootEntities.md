@@ -12,6 +12,8 @@
 - FxTokenMappingCounter
 - FxDeposit
 - FxDepositCounter
+- FxWithdraw
+- FxWithdrawCounter
 - Validator
 - StakeUpdate
 - GlobalDelegatorCounter
