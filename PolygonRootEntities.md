@@ -1,1 +1,25 @@
+# Entities
 
+### Entities for the Enzyme Core Subgraph are all listed below.
+
+- Checkpoint
+- StateSync
+- StateRegistration
+- PlasmaExit
+- PredicateRegistration
+- TokenMapping
+- FxTokenMapping
+- FxTokenMappingCounter
+- FxDeposit
+- FxDepositCounter
+- Validator
+- StakeUpdate
+- GlobalDelegatorCounter
+- GlobalPlasmaExitCounter
+- Delegator
+- Topup
+- StakingNFTTransfer
+- DelegatorUnbond
+- MaticTransfer
+- GlobalDelegationCounter
+- Delegation
