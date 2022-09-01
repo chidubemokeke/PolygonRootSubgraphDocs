@@ -30,6 +30,7 @@
 
 Description:
 
-| Field                           | Type        | Description
-| ------------------------------- | ----------- | 
-| id                              | ID!         | ID is set to 1                                        
+| Field                 | Type     | Description                      |
+| --------------------- | -------- | -------------------------------- |
+| id                    | ID       | ID is set to 1                   |
+
