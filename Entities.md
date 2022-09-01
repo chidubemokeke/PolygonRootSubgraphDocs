@@ -59,7 +59,7 @@ Description:
 | data                       | String!  |                                  |
 | rawData                    | String!  |                                  |
 | logIndex                   | String!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| transactionHash            | Bytes!   |                                  | 
 | timeStamp                  | BigInt!  |                                  |
 | blockNumber                | BigInt!  |                                  |
 
@@ -81,7 +81,288 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| counter                    | 
+| counter                    | BigInt!  |                                  |
+| exitId                     | BigInt!  |                                  |
+| exitInitiator              | Bytes!   |                                  |
+| exitCompleter              | Bytes!   |                                  |
+| Token                      | Bytes!   |                                  |
+| amount                     | BigInt!  |                                  |
+| isRegularExit              | Boolean! |                                  |
+| exited                     | Int!     |                                  |
+| exitStartedTxHash          | Bytes!   |                                  |
+| exitStartedTimeStamp       | BigInt!  |                                  |
+| exitCancelledTxHash        | BigInt!  |                                  |
+| exitCancelledTimeStamp     | BigInt!  |                                  |
+| exitCompletedTxHash        | BigInt!  |                                  |
+| exitCompletedTimeStamp     | BigInt!  |                                  |
 
+# PredicateRegistration
 
+Description: 
 
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| tokenType                  | Bytes!   |                                  |
+| predicateAddress           | Bytes!   |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# TokenMapping
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| rootToken                  | Bytes!   |                                  |
+| childToken                 | Bytes!   |                                  |
+| tokenType                  | String!  |                                  |
+| isPOS                      | Boolean! |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# FxTokenMapping
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| counter                    | BigInt!  |                                  |
+| contractAddress            | Bytes!   |                                  |
+| rootToken                  | Bytes!   |                                  |
+| childToken                 | Bytes!   |                                  |
+| tokenType                  | String!  |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# FxTokenMappingCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# FxDeposit
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| counter                    | BigInt!  |                                  |
+| contractAddress            | Bytes!   |                                  |
+| rootToken                  | Bytes!   |                                  |
+| tokenType                  | String!  |                                  |
+| depositor                  | Bytes!   |                                  |
+| userAddress                | Bytes!   |                                  |
+| amount                     | BigInt!  |                                  |
+| tokenId                    | BigInt!  |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# FxDepositCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# FxWithdraw
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| counter                    | BigInt!  |                                  |
+| contractAddress            | Bytes!   |                                  |
+| rootToken                  | Bytes!   |                                  |
+| childToken                 | Bytes!   |                                  |
+| tokenType                  | String!  |                                  |
+| userAddress                | Bytes!   |                                  |
+| amount                     | BigInt!  |                                  |
+| tokenId                    | BigInt!  |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# FxWithdrawCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# Validator
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| validatorId                | BigInt!  |                                  |
+| owner                      | Bytes!   |                                  |
+| signer                     | Bytes!   |                                  |
+| signerPubKey               | Bytes!   |                                  |
+| liquidatedRewards          | BigInt!  |                                  |
+| activationEpoch            | BigInt!  |                                  |
+| deactivationEpoch          | BigInt!  |                                  |
+| totalStaked                | BigInt!  |                                  |
+| selfStake                  | BigInt!  |                                  |
+| delegatedStake             | BigInt!  |                                  |
+| commissionRate             | BigInt!  |                                  |
+| nonce                      | BigInt!  |                                  |
+| status                     | Int!     |                                  |
+| jailEndEpoch               | BigInt!  |                                  |
+| auctionAmount              | BigInt!  |                                  |
+| isInAuction                | Boolean! |                                  |
+
+# StakeUpdate
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| validatorId                | BigInt!  |                                  |
+| totalStaked                | BigInt!  |                                  |
+| block                      | BigInt!  |                                  |
+| nonce                      | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+| logIndex                   | BigInt!  |                                  |
+
+# GlobalDelegatorCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# GlobalPlasmaExitCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# Delegator
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| counter                    | BigInt!  |                                  |
+| validatorId                | BigInt!  |                                  |
+| address                    | Bytes!   |                                  |
+| delegatedAmount            | BigInt!  |                                  |
+| unclaimedAmount            | BigInt!  |                                  |
+| claimedAmount              | BigInt!  |                                  |
+| tokens                     | BigInt!  |                                  |
+| claimedRewards             | BigInt!  |                                  |
+
+# Topup
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| address                    | Bytes!   |                                  |
+| topupAmount                | BigInt!  |                                  |
+| withdrawAmount             | BigInt!  |                                  |
+
+# StakinParams
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| owner                      | Bytes!   |                                  |
+| validatorThreshhold        | BigInt!  |                                  |
+| prosperBonus               | BigInt!  |                                  |
+| dynasty                    | BigInt!  |                                  |
+| liquidatedRewards          | BigInt!  |                                  |
+
+# StakingNFTTransfer
+
+Description: 
+
+| Field                      | Type      | Description                      |
+| -------------------------- | --------- | -------------------------------- |
+| id                         | ID!       | ID is set to 1                   |
+| tokenId                    | BigInt!   |                                  |
+| currentOwner               | Bytes!    |                                  |
+| previousOwners             | [Bytes!]! |                                  |
+| transactionHashes          | [Bytes!]! |                                  |
+
+# DelegatorUnbond
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| nonce                      | BigInt!  |                                  | 
+| validatorId                | BigInt!  |                                  |
+| user                       | Bytes!   |                                  |
+| amount                     | BigInt!  |                                  |
+| tokens                     | BigInt!  |                                  |
+| completed                  | Boolean! |                                  |
+| unbondStartedTXHash        | Bytes!   |                                  |
+| unbondStartedTimeStamp     | BigInt!  |                                  |
+| unbondClaimedTXHash        | Bytes!   |                                  |
+| unbondClaimedTimeStamp     | BigInt!  |                                  |
+| activeStake                | BigInt!  |                                  |
+
+# MaticTransfer
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| token                      | Bytes!   |                                  |
+| from                       | Bytes!   |                                  |
+| to                         | Bytes!   |                                  |
+| value                      | BigInt!  |                                  |
+| block                      | BigInt!  |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+
+# GlobalDelegationCounter
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| current                    | BigInt!  |                                  |
+
+# Delegator
+
+Description: 
+
+| Field                      | Type     | Description                      |
+| -------------------------- | -------- | -------------------------------- |
+| id                         | ID!      | ID is set to 1                   |
+| counter                    | BigInt!  |                                  |
+| validatorId                | BigInt!  |                                  |
+| address                    | Bytes!   |                                  |
+| timestamp                  | BigInt!  |                                  |
+| transactionHash            | Bytes!   |                                  |
+| amount                     | BigInt!  |                                  |
+| block                      | BigInt!  |                                  |
+| activeStake                | BigInt!  |                                  |
