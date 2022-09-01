@@ -32,5 +32,9 @@ Description:
 
 | Field                 | Type     | Description                      |
 | --------------------- | -------- | -------------------------------- |
-| id                    | ID       | ID is set to 1                   |
-
+| id                    | ID!      | ID is set to 1                   |
+| Proposer              | Bytes!   |                                  |
+| headerBlockId         | BigInt!  |                                  |
+| checkpointNumber      | BigInt!  |                                  |
+| reward                | BigInt!  |                                  |
+| start
