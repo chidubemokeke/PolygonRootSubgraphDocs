@@ -25,3 +25,9 @@
 - MaticTransfer
 - GlobalDelegationCounter
 - Delegation
+
+# Checkpoint
+
+Description:
+
+| Field                           | Type         | Description
