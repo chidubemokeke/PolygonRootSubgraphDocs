@@ -20,6 +20,7 @@
 - GlobalPlasmaExitCounter
 - Delegator
 - Topup
+- StakingParams
 - StakingNFTTransfer
 - DelegatorUnbond
 - MaticTransfer
@@ -351,7 +352,7 @@ Description:
 | id                         | ID!      | ID is set to 1                   |
 | current                    | BigInt!  |                                  |
 
-# Delegator
+# Delegation
 
 Description: 
 
