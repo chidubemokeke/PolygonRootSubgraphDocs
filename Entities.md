@@ -1,6 +1,6 @@
 # Entities
 
-### Entities for the Enzyme Core Subgraph are all listed below.
+### Entities for the Polygon Root Subgraph are all listed below.
 
 - Checkpoint
 - StateSync
