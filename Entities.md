@@ -367,3 +367,4 @@ Description:
 | amount                     | BigInt!  |                                  |
 | block                      | BigInt!  |                                  |
 | activeStake                | BigInt!  |                                  |
+|
