@@ -172,7 +172,7 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| current                    | BigInt!  | Current number of FxDeposits     |
 
 # FxWithdraw
 
@@ -199,7 +199,7 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| current                    | BigInt!  | Current number of FxWithdrawals  |
 
 # Validator
 
@@ -246,7 +246,7 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| current                    | BigInt!  | Current number of delegators     |
 
 # GlobalPlasmaExitCounter
 
@@ -255,7 +255,7 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| current                    | BigInt!  | Current number of plasma exits   |
 
 # Delegator
 
@@ -350,7 +350,7 @@ Description:
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| current                    | BigInt!  | Current number of delegations    |
 
 # Delegation
 
@@ -367,4 +367,4 @@ Description:
 | amount                     | BigInt!  |                                  |
 | block                      | BigInt!  |                                  |
 | activeStake                | BigInt!  |                                  |
-|
+
