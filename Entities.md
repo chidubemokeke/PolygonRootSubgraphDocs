@@ -33,7 +33,7 @@ Description:
 
 | Field                 | Type     | Description                                 |
 | --------------------- | -------- | ------------------------------------------- |
-| id                    | ID!      | ID is set to 1                              |
+| id                    | ID!      | Checkpoint Id                               |
 | Proposer              | Bytes!   | The address of the proposer                 |
 | headerBlockId         | BigInt!  | The Id of the header block                  |
 | checkpointNumber      | BigInt!  | The checkpoint number                       |
@@ -51,7 +51,7 @@ Description:
 
 | Field                      | Type     | Description                                                |
 | -------------------------- | -------- | ---------------------------------------------------------- |
-| id                         | ID!      | ID is set to 1                                             |
+| id                         | ID!      | StateSync Id                                               |
 | stateId                    | BigInt!  | The stateId number                                         |
 | contract                   | Bytes!   | The contract address                                       |
 | syncType                   | Int!     | Type of sync                                               |
@@ -70,10 +70,10 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| user                       | Bytes!   |                                  |
-| receiver                   | Bytes!   |                                  |
-| sender                     | Bytes!   |                                  |
+| id                         | ID!      | State registration Id            |
+| user                       | Bytes!   | User address                     |
+| receiver                   | Bytes!   | Receiver address                 |
+| sender                     | Bytes!   | Sender address                   |
 
 # PlasmaExit
 
@@ -81,21 +81,21 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| exitId                     | BigInt!  |                                  |
-| exitInitiator              | Bytes!   |                                  |
-| exitCompleter              | Bytes!   |                                  |
-| Token                      | Bytes!   |                                  |
-| amount                     | BigInt!  |                                  |
-| isRegularExit              | Boolean! |                                  |
+| id                         | ID!      | Plasma exit Id                   |
+| counter                    | BigInt!  | PlasmaExit counter               |
+| exitId                     | BigInt!  | Exit Id                          |
+| exitInitiator              | Bytes!   | Address of plasma exit initiator |
+| exitCompleter              | Bytes!   | Address of plasma exit completed |
+| Token                      | Bytes!   | Token contract address           |
+| amount                     | BigInt!  | Liquidity amount to exit         |
+| isRegularExit              | Boolean! | Regular exit check               |
 | exited                     | Int!     |                                  |
-| exitStartedTxHash          | Bytes!   |                                  |
-| exitStartedTimeStamp       | BigInt!  |                                  |
-| exitCancelledTxHash        | BigInt!  |                                  |
-| exitCancelledTimeStamp     | BigInt!  |                                  |
-| exitCompletedTxHash        | BigInt!  |                                  |
-| exitCompletedTimeStamp     | BigInt!  |                                  |
+| exitStartedTxHash          | Bytes!   | Exit started transaction hash    |
+| exitStartedTimeStamp       | BigInt!  | Exit started timestamp           |
+| exitCancelledTxHash        | BigInt!  | Exit cancelled transaction hash  |
+| exitCancelledTimeStamp     | BigInt!  | Exit started timestamp           |
+| exitCompletedTxHash        | BigInt!  | Exit completed transaction hash  |
+| exitCompletedTimeStamp     | BigInt!  | Exit started timestamp           |
 
 # PredicateRegistration
 
