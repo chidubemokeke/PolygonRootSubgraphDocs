@@ -49,20 +49,20 @@ Description:
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| stateId                    | BigInt!  |                                  |
-| contract                   | Bytes!   |                                  |
-| syncType                   | Int!     |                                  |
-| depositorOrRootToken       | String!  |                                  |
-| depositedTokenOrChildToken | String!  |                                  |
-| data                       | String!  |                                  |
-| rawData                    | String!  |                                  |
-| logIndex                   | String!  |                                  |
-| transactionHash            | Bytes!   |                                  | 
-| timeStamp                  | BigInt!  |                                  |
-| blockNumber                | BigInt!  |                                  |
+| Field                      | Type     | Description                                                |
+| -------------------------- | -------- | ---------------------------------------------------------- |
+| id                         | ID!      | ID is set to 1                                             |
+| stateId                    | BigInt!  | The stateId number                                         |
+| contract                   | Bytes!   | The contract address                                       |
+| syncType                   | Int!     | Type of sync                                               |
+| depositorOrRootToken       | String!  | Depositor or root token address                            |
+| depositedTokenOrChildToken | String!  | Address of deposited token or child token address          |
+| data                       | String!  | data containing the state of the contract at sync time     |
+| rawData                    | String!  | Raw data containing the state of the contract at sync time |
+| logIndex                   | String!  | logIndex Id                                                |
+| transactionHash            | Bytes!   | Transaction hash                                           | 
+| timeStamp                  | BigInt!  | Timestamp during sync of contract state                    |
+| blockNumber                | BigInt!  | Block number of the state sync                             |
 
 # StateRegistration
 
