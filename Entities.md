@@ -31,19 +31,19 @@
 
 Description:
 
-| Field                 | Type     | Description                      |
-| --------------------- | -------- | -------------------------------- |
-| id                    | ID!      | ID is set to 1                   |
-| Proposer              | Bytes!   |                                  |
-| headerBlockId         | BigInt!  |                                  |
-| checkpointNumber      | BigInt!  |                                  |
-| reward                | BigInt!  |                                  |
-| start                 | BigInt!  |                                  |
-| end                   | BigInt!  |                                  |
-| root                  | Bytes!   |                                  |
-| logIndex              | String!  |                                  |
-| transactionHash       | Bytes!   |                                  |
-| timeStamp             | BigInt!  |                                  |
+| Field                 | Type     | Description                                 |
+| --------------------- | -------- | ------------------------------------------- |
+| id                    | ID!      | ID is set to 1                              |
+| Proposer              | Bytes!   | The address of the proposer                 |
+| headerBlockId         | BigInt!  | The Id of the header block                  |
+| checkpointNumber      | BigInt!  | The checkpoint number                       |
+| reward                | BigInt!  | The reward of the proposed checkpoint       |
+| start                 | BigInt!  | Start block of the proposed checkpoint      |
+| end                   | BigInt!  | End block of the proposed checkpoint        |
+| root                  | Bytes!   | Merkle root hash of the proposed checkpoint |
+| logIndex              | String!  | LogIndex ID                                 |
+| transactionHash       | Bytes!   | Transaction hash of proposed checkpoint     |
+| timeStamp             | BigInt!  | The checkpoint timestamp                    |
 
 # StateSync
 
