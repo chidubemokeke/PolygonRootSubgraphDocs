@@ -2,7 +2,7 @@
 
 ### Entities for the Polygon Root Subgraph are all listed below.
 
-- Checkpoint
+- [Checkpoint](#checkpoint)
 - StateSync
 - StateRegistration
 - PlasmaExit
