@@ -79,91 +79,91 @@ Description:
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | Plasma exit Id                   |
-| counter                    | BigInt!  | PlasmaExit counter               |
-| exitId                     | BigInt!  | Exit Id                          |
-| exitInitiator              | Bytes!   | Address of plasma exit initiator |
-| exitCompleter              | Bytes!   | Address of plasma exit completed |
-| Token                      | Bytes!   | Token contract address           |
-| amount                     | BigInt!  | Liquidity amount to exit         |
-| isRegularExit              | Boolean! | Regular exit check               |
-| exited                     | Int!     |                                  |
-| exitStartedTxHash          | Bytes!   | Exit started transaction hash    |
-| exitStartedTimeStamp       | BigInt!  | Exit started timestamp           |
-| exitCancelledTxHash        | BigInt!  | Exit cancelled transaction hash  |
-| exitCancelledTimeStamp     | BigInt!  | Exit started timestamp           |
-| exitCompletedTxHash        | BigInt!  | Exit completed transaction hash  |
-| exitCompletedTimeStamp     | BigInt!  | Exit started timestamp           |
+| Field                      | Type     | Description                                                          |
+| -------------------------- | -------- | -------------------------------------------------------------------- |
+| id                         | ID!      | Always created using plasma-exit-${exitId}                           |
+| counter                    | BigInt!  | Shows where the exitStarted transaction happened                     |
+| exitId                     | BigInt!  | Exit Id                                                              |  
+| exitInitiator              | Bytes!   | Address of plasma exit initiator                                     |
+| exitCompleter              | Bytes!   | Address of plasma exit completed                                     |
+| Token                      | Bytes!   | Token contract address                                               |
+| amount                     | BigInt!  | Liquidity amount to exit                                             |
+| isRegularExit              | Boolean! | Regular exit check                                                   |
+| exited                     | Int!     | exit codes: 0 - exit started, 1 - exit cancelled, 2 - exit completed |
+| exitStartedTxHash          | Bytes!   | Exit started transaction hash                                        |
+| exitStartedTimeStamp       | BigInt!  | Exit started timestamp                                               |
+| exitCancelledTxHash        | BigInt!  | Exit cancelled transaction hash                                      |
+| exitCancelledTimeStamp     | BigInt!  | Exit started timestamp                                               |
+| exitCompletedTxHash        | BigInt!  | Exit completed transaction hash                                      |
+| exitCompletedTimeStamp     | BigInt!  | Exit started timestamp                                               |
 
 # PredicateRegistration
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| tokenType                  | Bytes!   |                                  |
-| predicateAddress           | Bytes!   |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| Field                      | Type     | Description                                 |
+| -------------------------- | -------- | ------------------------------------------- |
+| id                         | ID!      | Predicate registration Id                   |
+| tokenType                  | Bytes!   | Token contract address                      |
+| predicateAddress           | Bytes!   | Predicate address                           |
+| timestamp                  | BigInt!  | Predicate registration timestamp            |
+| transactionHash            | Bytes!   | Transaction hash of predicate registration  |
 
 # TokenMapping
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| rootToken                  | Bytes!   |                                  |
-| childToken                 | Bytes!   |                                  |
-| tokenType                  | String!  |                                  |
-| isPOS                      | Boolean! |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| Field                      | Type     | Description                         |
+| -------------------------- | -------- | ----------------------------------- |
+| id                         | ID!      | Token mapping Id                    |
+| rootToken                  | Bytes!   | Root token address                  |
+| childToken                 | Bytes!   | Child token address                 |
+| tokenType                  | String!  | Token contract address              |
+| isPOS                      | Boolean! | Checks wether POS is true or false  |
+| timestamp                  | BigInt!  | Token mapping timestamp             |
+| transactionHash            | Bytes!   | Transaction hash                    |
 
 # FxTokenMapping
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| contractAddress            | Bytes!   |                                  |
-| rootToken                  | Bytes!   |                                  |
-| childToken                 | Bytes!   |                                  |
-| tokenType                  | String!  |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| Field                      | Type     | Description                                    |
+| -------------------------- | -------- | ---------------------------------------------- |
+| id                         | ID!      | Fx token mapping Id                            |
+| counter                    | BigInt!  | Fx token mapping counter                       |
+| contractAddress            | Bytes!   | Contract address that handles Fx token mapping |
+| rootToken                  | Bytes!   | Root token address                             |
+| childToken                 | Bytes!   | Child token address                            |
+| tokenType                  | String!  | Token contract address                         |
+| timestamp                  | BigInt!  | Fx Token mapping timestamp                     |
+| transactionHash            | Bytes!   | Fx transaction hash                            |
 
 # FxTokenMappingCounter
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  |                                  |
+| Field                      | Type     | Description                        |
+| -------------------------- | -------- | ---------------------------------- |
+| id                         | ID!      | Fx token mapping Id                |
+| current                    | BigInt!  | Current count for fx token mapping |
 
 # FxDeposit
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| contractAddress            | Bytes!   |                                  |
-| rootToken                  | Bytes!   |                                  |
-| tokenType                  | String!  |                                  |
-| depositor                  | Bytes!   |                                  |
-| userAddress                | Bytes!   |                                  |
-| amount                     | BigInt!  |                                  |
-| tokenId                    | BigInt!  |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| Field                      | Type     | Description                               |
+| -------------------------- | -------- | ----------------------------------------- |
+| id                         | ID!      | Fx deposit Id                             |
+| counter                    | BigInt!  | Fx deposit counter                        |
+| contractAddress            | Bytes!   | Contract address that handles fx deposits |
+| rootToken                  | Bytes!   | Root token address                        |
+| tokenType                  | String!  | Token contract address                    |
+| depositor                  | Bytes!   | Address of the depositor                  |
+| userAddress                | Bytes!   | User address                              |
+| amount                     | BigInt!  | Amount of fx deposited in the transaction |
+| tokenId                    | BigInt!  | Token Id                                  |
+| timestamp                  | BigInt!  | Block timestamp                           |
+| transactionHash            | Bytes!   | Fx transaction hash                       |
 
 # FxDepositCounter
 
@@ -171,26 +171,26 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
+| id                         | ID!      | Fx deposit counter Id            |
 | current                    | BigInt!  | Current number of FxDeposits     |
 
 # FxWithdraw
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| contractAddress            | Bytes!   |                                  |
-| rootToken                  | Bytes!   |                                  |
-| childToken                 | Bytes!   |                                  |
-| tokenType                  | String!  |                                  |
-| userAddress                | Bytes!   |                                  |
-| amount                     | BigInt!  |                                  |
-| tokenId                    | BigInt!  |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| Field                      | Type     | Description                               |
+| -------------------------- | -------- | ----------------------------------------- |
+| id                         | ID!      | Fx withdraw Id                            |
+| counter                    | BigInt!  | Fx withdraw counter                       |
+| contractAddress            | Bytes!   | Contract address that handles withdrawals |
+| rootToken                  | Bytes!   | Root token address                        |
+| childToken                 | Bytes!   | Child token address                       |
+| tokenType                  | String!  | Token contract address                    |
+| userAddress                | Bytes!   | User address                              |
+| amount                     | BigInt!  | Amount of fx withdrawn in the transaction |
+| tokenId                    | BigInt!  | Token Id                                  |
+| timestamp                  | BigInt!  | Block timestamp                           |
+| transactionHash            | Bytes!   | Fx transaction hash                       |
 
 # FxWithdrawCounter
 
@@ -198,32 +198,32 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
+| id                         | ID!      | Fx withdraw counter Id           |
 | current                    | BigInt!  | Current number of FxWithdrawals  |
 
 # Validator
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| validatorId                | BigInt!  |                                  |
-| owner                      | Bytes!   |                                  |
-| signer                     | Bytes!   |                                  |
-| signerPubKey               | Bytes!   |                                  |
-| liquidatedRewards          | BigInt!  |                                  |
-| activationEpoch            | BigInt!  |                                  |
-| deactivationEpoch          | BigInt!  |                                  |
-| totalStaked                | BigInt!  |                                  |
-| selfStake                  | BigInt!  |                                  |
-| delegatedStake             | BigInt!  |                                  |
-| commissionRate             | BigInt!  |                                  |
-| nonce                      | BigInt!  |                                  |
-| status                     | Int!     |                                  |
-| jailEndEpoch               | BigInt!  |                                  |
-| auctionAmount              | BigInt!  |                                  |
-| isInAuction                | Boolean! |                                  |
+| Field                      | Type     | Description                                                      |
+| -------------------------- | -------- | ---------------------------------------------------------------- |
+| id                         | ID!      | Validator Id                                                     |
+| validatorId                | BigInt!  | Validator Id                                                     |
+| owner                      | Bytes!   | Address of the owner                                             |
+| signer                     | Bytes!   | Address of the signer                                            |
+| signerPubKey               | Bytes!   | Public key of the signer                                         |
+| liquidatedRewards          | BigInt!  | Liquidated reward for the validator                              |
+| activationEpoch            | BigInt!  | Epoch validation was activated                                   |
+| deactivationEpoch          | BigInt!  | Epoch validation was deactivated                                 |
+| totalStaked                | BigInt!  | Total amount of tokens staked                                    |
+| selfStake                  | BigInt!  | Amount staked by the validator                                   |
+| delegatedStake             | BigInt!  | Amount delegated to the validator for staking                    |
+| commissionRate             | BigInt!  | Commission rate                                                  |
+| nonce                      | BigInt!  | Transaction nonce                                                |
+| status                     | Int!     | status codes: 0 - staked, 1 - unstaked, 2 - jailed, 3 - unjailed |
+| jailEndEpoch               | BigInt!  | Epoch where validator is unjailed                                |
+| auctionAmount              | BigInt!  | Auction amount                                                   |
+| isInAuction                | Boolean! | Checks wether validator is in auction                            |
 
 # StakeUpdate
 
