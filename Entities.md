@@ -3,29 +3,29 @@
 ### Entities for the Polygon Root Subgraph are all listed below.
 
 - [Checkpoint](#checkpoint)
-- StateSync
-- StateRegistration
-- PlasmaExit
-- PredicateRegistration
-- TokenMapping
-- FxTokenMapping
-- FxTokenMappingCounter
-- FxDeposit
-- FxDepositCounter
-- FxWithdraw
-- FxWithdrawCounter
-- Validator
-- StakeUpdate
-- GlobalDelegatorCounter
-- GlobalPlasmaExitCounter
-- Delegator
-- Topup
-- StakingParams
-- StakingNFTTransfer
-- DelegatorUnbond
-- MaticTransfer
-- GlobalDelegationCounter
-- Delegation
+- [StateSync](#statesync)
+- [StateRegistration](#stateregistration)
+- [PlasmaExit](#plasmaexit)
+- [PredicateRegistration](#predicateregistration)
+- [TokenMapping](#tokenmapping)
+- [FxTokenMapping](#fxtokenmapping)
+- [FxTokenMappingCounter](#fxtokenmappingcounter)
+- [FxDeposit](#fxdeposit)
+- [FxDepositCounter](#fxdepositcounter)
+- [FxWithdraw](#fxwithdraw)
+- [FxWithdrawCounter](#fxwithdrawcounter)
+- [Validator](#validator)
+- [StakeUpdate](#stakeupdate)
+- [GlobalDelegatorCounter](#globaldelegatorcounter)
+- [GlobalPlasmaExitCounter](#globalplasmaexitcounter)
+- [Delegator](#delegator)
+- [Topup](#topup)
+- [StakingParams](#stakingparams)
+- [StakingNFTTransfer](#stakingnfttransfer)
+- [DelegatorUnbond](#delegatorunbond)
+- [MaticTransfer](#matictransfer)
+- [GlobalDelegationCounter](#globaldelegationcounter)
+- [Delegation](#delegation)
 
 # Checkpoint
 
