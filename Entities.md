@@ -229,104 +229,91 @@ Description:
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| validatorId                | BigInt!  |                                  |
-| totalStaked                | BigInt!  |                                  |
-| block                      | BigInt!  |                                  |
-| nonce                      | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
-| logIndex                   | BigInt!  |                                  |
+| Field                      | Type     | Description                       |
+| -------------------------- | -------- | --------------------------------- |
+| id                         | ID!      | Stake update Id                   |
+| validatorId                | BigInt!  | Validator Id                      |
+| totalStaked                | BigInt!  | Total amount staked by validator  |
+| block                      | BigInt!  | Block number                      |
+| nonce                      | BigInt!  | Transaction nonce                 |
+| transactionHash            | Bytes!   | Transaction hash                  |
+| logIndex                   | BigInt!  | Log index number                  |
 
 # GlobalDelegatorCounter
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  | Current number of delegators     |
+| Field                      | Type     | Description                                                                    |
+| -------------------------- | -------- | ------------------------------------------------------------------------------ |
+| id                         | ID!      | Global delegator counter Id                                                    |
+| current                    | BigInt!  | Keeps track of current delegator counter i.e. delegators are present as of now |
 
 # GlobalPlasmaExitCounter
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| current                    | BigInt!  | Current number of plasma exits   |
+| Field                      | Type     | Description                                                                    |
+| -------------------------- | -------- | ------------------------------------------------------------------------------ |
+| id                         | ID!      | Global plasma exit counter                                                     |
+| current                    | BigInt!  | Count of the plasma exits and till where have the process exits been processed |
 
 # Delegator
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| validatorId                | BigInt!  |                                  |
-| address                    | Bytes!   |                                  |
-| delegatedAmount            | BigInt!  |                                  |
-| unclaimedAmount            | BigInt!  |                                  |
-| claimedAmount              | BigInt!  |                                  |
-| tokens                     | BigInt!  |                                  |
-| claimedRewards             | BigInt!  |                                  |
+| Field                      | Type     | Description                                                                 |
+| -------------------------- | -------- | --------------------------------------------------------------------------- |
+| id                         | ID!      | Delegator Id                                                                |
+| counter                    | BigInt!  | Traverse through large number of delegator list                             |
+| validatorId                | BigInt!  | Validator Id                                                                |
+| address                    | Bytes!   | Delegator address                                                           |
+| delegatedAmount            | BigInt!  | Total delegated amount                                                      |
+| unclaimedAmount            | BigInt!  | total unclaimed amount (after sellVoucher and before claiming it)           |
+| claimedAmount              | BigInt!  | total claimed amount (after withdraw delay, while claiming unstaked amount) |
+| tokens                     | BigInt!  | total current shares (works until tokens are non-transferable)              |
+| claimedRewards             | BigInt!  | Total claimed rewards                                                       |
 
-# Topup
-
-Description: 
-
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| address                    | Bytes!   |                                  |
-| topupAmount                | BigInt!  |                                  |
-| withdrawAmount             | BigInt!  |                                  |
-
-# StakinParams
+# Topup 
 
 Description: 
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| owner                      | Bytes!   |                                  |
-| validatorThreshhold        | BigInt!  |                                  |
-| prosperBonus               | BigInt!  |                                  |
-| dynasty                    | BigInt!  |                                  |
-| liquidatedRewards          | BigInt!  |                                  |
+| id                         | ID!      | Heimdall topup Id                |
+| address                    | Bytes!   | Merkle root hash                 |
+| topupAmount                | BigInt!  | Topup amount                     |
+| withdrawAmount             | BigInt!  | Amount withdrawn                 |
 
 # StakingNFTTransfer
 
 Description: 
 
-| Field                      | Type      | Description                      |
-| -------------------------- | --------- | -------------------------------- |
-| id                         | ID!       | ID is set to 1                   |
-| tokenId                    | BigInt!   |                                  |
-| currentOwner               | Bytes!    |                                  |
-| previousOwners             | [Bytes!]! |                                  |
-| transactionHashes          | [Bytes!]! |                                  |
+| Field                      | Type      | Description                         |
+| -------------------------- | --------- | ----------------------------------- |
+| id                         | ID!       | Staking NFT transfer Id             |
+| tokenId                    | BigInt!   | NFT Id                              |
+| currentOwner               | Bytes!    | Current owner address               |
+| previousOwners             | [Bytes!]! | Array of previous owners addresses  |
+| transactionHashes          | [Bytes!]! | Array of transaction hashes         |
 
 # DelegatorUnbond
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| nonce                      | BigInt!  |                                  | 
-| validatorId                | BigInt!  |                                  |
-| user                       | Bytes!   |                                  |
-| amount                     | BigInt!  |                                  |
-| tokens                     | BigInt!  |                                  |
-| completed                  | Boolean! |                                  |
-| unbondStartedTXHash        | Bytes!   |                                  |
-| unbondStartedTimeStamp     | BigInt!  |                                  |
-| unbondClaimedTXHash        | Bytes!   |                                  |
-| unbondClaimedTimeStamp     | BigInt!  |                                  |
-| activeStake                | BigInt!  |                                  |
+| Field                      | Type     | Description                                |
+| -------------------------- | -------- | ------------------------------------------ |
+| id                         | ID!      | Delegator unbond Id                        |
+| nonce                      | BigInt!  | Transaction nonce                          | 
+| validatorId                | BigInt!  | Validator Id                               |
+| user                       | Bytes!   | Delegator address                          |
+| amount                     | BigInt!  | Total amount                               |
+| tokens                     | BigInt!  | Token amount                               |
+| completed                  | Boolean! | Checks wether unbond is complete           |
+| unbondStartedTXHash        | Bytes!   | Transaction hash when unbond was initaited |
+| unbondStartedTimeStamp     | BigInt!  | Timestamp when when unbond was initaited   |
+| unbondClaimedTXHash        | Bytes!   | Transaction hash when unbond was claimed   |
+| unbondClaimedTimeStamp     | BigInt!  | Timestamp when unbond was claimed          |
+| activeStake                | BigInt!  | Active stake                               |
 
 # MaticTransfer
 
@@ -334,14 +321,14 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| token                      | Bytes!   |                                  |
-| from                       | Bytes!   |                                  |
-| to                         | Bytes!   |                                  |
-| value                      | BigInt!  |                                  |
-| block                      | BigInt!  |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
+| id                         | ID!      | Matic transfer Id                |
+| token                      | Bytes!   | Token address                    |
+| from                       | Bytes!   | Sender address                   |
+| to                         | Bytes!   | Receiver address                 |
+| value                      | BigInt!  | Amount of matic transferred      |
+| block                      | BigInt!  | Transaction block                |
+| timestamp                  | BigInt!  | Transaction timestamp            |
+| transactionHash            | Bytes!   | Transaction hash                 |
 
 # GlobalDelegationCounter
 
@@ -349,22 +336,22 @@ Description:
 
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
+| id                         | ID!      | Delegation counter Id            |
 | current                    | BigInt!  | Current number of delegations    |
 
 # Delegation
 
 Description: 
 
-| Field                      | Type     | Description                      |
-| -------------------------- | -------- | -------------------------------- |
-| id                         | ID!      | ID is set to 1                   |
-| counter                    | BigInt!  |                                  |
-| validatorId                | BigInt!  |                                  |
-| address                    | Bytes!   |                                  |
-| timestamp                  | BigInt!  |                                  |
-| transactionHash            | Bytes!   |                                  |
-| amount                     | BigInt!  |                                  |
-| block                      | BigInt!  |                                  |
-| activeStake                | BigInt!  |                                  |
+| Field                      | Type     | Description                                     |
+| -------------------------- | -------- | ----------------------------------------------- |
+| id                         | ID!      | Delegation Id                                   |
+| counter                    | BigInt!  | Traverse through large number of delegator list |
+| validatorId                | BigInt!  | Validator Id                                    |
+| address                    | Bytes!   | Delegator address                               |
+| timestamp                  | BigInt!  | Transaction timestamp                           |
+| transactionHash            | Bytes!   | Delegation transaction hash                     |
+| amount                     | BigInt!  | Delegation amount                               |
+| block                      | BigInt!  | Transaction block                               |
+| activeStake                | BigInt!  | Active stake                                    |
 
