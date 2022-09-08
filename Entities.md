@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: Subgraph Entities
+---
+
 # Entities
 
 ### Entities for the Polygon Root Subgraph are all listed below.
