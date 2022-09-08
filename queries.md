@@ -10,11 +10,11 @@ You can build your own queries using a [GraphQL Explorer](https://graphiql-onlin
 
 ### Checkpoints
 
-Description: Get checkpoints proposed and the validated blocks assigned to it as well as the rewards for each.
+Description: This query gets the first 20 checkpoints proposed and the validated blocks assigned to it as well as the rewards for each.
 
 ```graphql
 {
-  checkpoints(orderBy: id, orderDirection: asc) {
+  checkpoints(orderBy: id, orderDirection: asc, first: 20) {
     id
     proposer
     start
@@ -29,7 +29,7 @@ Description: Get checkpoints proposed and the validated blocks assigned to it as
 
 ### Delegators
 
-Description: Get total number of active delegators, their delegations and the validator they delegated to.
+Description: This query gets the total number of active delegators, the first 50 delegations and the validator they delegated to.
 
 ```graphql
 {
@@ -37,7 +37,7 @@ Description: Get total number of active delegators, their delegations and the va
     id
     current
   }
-	delegations {
+  delegations(first: 50) {
     id
     block
     activeStake
