@@ -45,3 +45,20 @@ Description: This query gets the total number of active delegators, the first 50
   }
 }
 ```
+
+### Transfers
+
+Description: This query gets the first 50 matic token transfers, the sender, receiver, value, transaction block and timestamp.
+
+```graphql
+{
+  maticTransfers(first: 50, orderBy: id, orderDirection: asc) {
+    id
+    from
+    to
+    value
+    block
+    timestamp
+  }
+}
+```
