@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: Subgraph Data Introduction
+---
+
 # Polygon Root Subgraph Introduction
 
 Polygon has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/docs/about/introduction#what-the-graph-is) called a subgraph for indexing and organizing data from the Polygon smart contracts.
