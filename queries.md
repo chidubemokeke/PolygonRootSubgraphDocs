@@ -26,3 +26,22 @@ Description: Get checkpoints proposed and the validated blocks assigned to it as
   }
 }
 ```
+
+### Delegators
+
+Description: Get total number of active delegators, their delegations and the validator they delegated to.
+
+```graphql
+{
+  globalDelegatorCounters {
+    id
+    current
+  }
+	delegations {
+    id
+    block
+    activeStake
+    validatorId
+  }
+}
+```
