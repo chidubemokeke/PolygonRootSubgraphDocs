@@ -14,9 +14,9 @@ This subgraph is can be used to query on-chain Polygon data. The subgraph data i
 Learn more about how subgraphs work by checking out [The Graph's official documentation](https://thegraph.com/docs/en/). 
 
 
-## Ethereum Mainnet
+## Helpful Resources
 
-[Creating an API Key Video Tutorial](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
+[Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
 
 - [Explorer Page](https://thegraph.com/explorer/subgraph?id=FDrqtqbp8LhG1hSnwtWB2hE6C97FWA54irrozjb2TtMH&view=Overview)
 - Graphql Endpoint: https://gateway.thegraph.com/api/[api-key]/subgraphs/id/FDrqtqbp8LhG1hSnwtWB2hE6C97FWA54irrozjb2TtMH
