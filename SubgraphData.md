@@ -9,7 +9,7 @@ Polygon has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/do
 
 This subgraph is can be used to query on-chain Polygon data. The subgraph data is serviced by a decentralized group of server operators called [Indexers](https://thegraph.com/docs/en/network/indexing/).
 
-*** Get Started
+### Get Started
 
 Learn more about how subgraphs work by checking out [The Graph's official documentation](https://thegraph.com/docs/en/). 
 
