@@ -16,14 +16,13 @@ Learn more about how subgraphs work by checking out [The Graph's official docume
 
 ## Helpful Resources
 
-[Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
-
+- [Video Tutorial on creating an API Key](https://www.youtube.com/watch?v=UrfIpm-Vlgs)
+- [Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/ )
+- [Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/) 
 - [Explorer Page](https://thegraph.com/explorer/subgraph?id=FDrqtqbp8LhG1hSnwtWB2hE6C97FWA54irrozjb2TtMH&view=Overview)
 - Graphql Endpoint: https://gateway.thegraph.com/api/[api-key]/subgraphs/id/FDrqtqbp8LhG1hSnwtWB2hE6C97FWA54irrozjb2TtMH
 - [Code Repo](https://github.com/maticnetwork/subgraphs)
 
-## Helpful Links
 
-[Querying from an application](https://thegraph.com/docs/en/developer/querying-from-your-app/) 
 
-[Managing your API Key & setting your indexer preferences](https://thegraph.com/docs/en/studio/managing-api-keys/ )
+
