@@ -7,9 +7,11 @@ title: Subgraph Data Introduction
 
 Polygon has a GraphQL API Endpoint hosted by [The Graph](https://thegraph.com/docs/about/introduction#what-the-graph-is) called a subgraph for indexing and organizing data from the Polygon smart contracts.
 
-This subgraph is can be used to query Polygon data.
+This subgraph is can be used to query on-chain Polygon data. The subgraph data is serviced by a decentralized group of server operators called [Indexers](https://thegraph.com/docs/en/network/indexing/).
 
-Subgraph information is serviced by a decentralized group of server operators called Indexers.
+::: tip Get Started
+Learn more about how subgraphs work by checking out [The Graph's official documentation](https://thegraph.com/docs/en/). 
+:::
 
 ## Ethereum Mainnet
 
