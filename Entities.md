@@ -1,6 +1,19 @@
 ---
-sidebar_position: 2
-title: Subgraph Entities
+id: Subgraph entities
+title: Entity descriptions
+sidebar_label: Using Polygon's root subgraph
+description: Learn how to use Polygon's subgraph for data
+keywords:
+  - docs
+  - matic
+  - polygon
+  - the graph
+  - data
+  - analytics
+  - index
+  - indexing
+  - query
+image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 # Entities
