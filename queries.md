@@ -1,6 +1,19 @@
 ---
-sidebar_position: 3
-title: Sample Queries
+id: Query subgraphs
+title: Sample queries
+sidebar_label: Querying Polygon's root subgraph
+description: Learn how to use Polygon's subgraph for data
+keywords:
+  - docs
+  - matic
+  - polygon
+  - the graph
+  - data
+  - analytics
+  - index
+  - indexing
+  - query
+image: https://matic.network/banners/matic-network-16x9.png
 ---
 
 ## Sample Queries
