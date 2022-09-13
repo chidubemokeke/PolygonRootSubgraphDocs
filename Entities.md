@@ -47,8 +47,6 @@ image: https://matic.network/banners/matic-network-16x9.png
 
 # Checkpoint
 
-Description:
-
 | Field                 | Type     | Description                                 |
 | --------------------- | -------- | ------------------------------------------- |
 | id                    | ID!      | Checkpoint Id                               |
@@ -64,8 +62,6 @@ Description:
 | timeStamp             | BigInt!  | The checkpoint timestamp                    |
 
 # StateSync
-
-Description: 
 
 | Field                      | Type     | Description                                                |
 | -------------------------- | -------- | ---------------------------------------------------------- |
@@ -84,8 +80,6 @@ Description:
 
 # StateRegistration
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | State registration Id            |
@@ -94,8 +88,6 @@ Description:
 | sender                     | Bytes!   | Sender address                   |
 
 # PlasmaExit
-
-Description: 
 
 | Field                      | Type     | Description                                                          |
 | -------------------------- | -------- | -------------------------------------------------------------------- |
@@ -117,8 +109,6 @@ Description:
 
 # PredicateRegistration
 
-Description: 
-
 | Field                      | Type     | Description                                 |
 | -------------------------- | -------- | ------------------------------------------- |
 | id                         | ID!      | Predicate registration Id                   |
@@ -127,9 +117,7 @@ Description:
 | timestamp                  | BigInt!  | Predicate registration timestamp            |
 | transactionHash            | Bytes!   | Transaction hash of predicate registration  |
 
-# TokenMapping
-
-Description: 
+# TokenMapping 
 
 | Field                      | Type     | Description                         |
 | -------------------------- | -------- | ----------------------------------- |
@@ -142,8 +130,6 @@ Description:
 | transactionHash            | Bytes!   | Transaction hash                    |
 
 # FxTokenMapping
-
-Description: 
 
 | Field                      | Type     | Description                                    |
 | -------------------------- | -------- | ---------------------------------------------- |
@@ -158,16 +144,12 @@ Description:
 
 # FxTokenMappingCounter
 
-Description: 
-
 | Field                      | Type     | Description                        |
 | -------------------------- | -------- | ---------------------------------- |
 | id                         | ID!      | Fx token mapping Id                |
 | current                    | BigInt!  | Current count for fx token mapping |
 
 # FxDeposit
-
-Description: 
 
 | Field                      | Type     | Description                               |
 | -------------------------- | -------- | ----------------------------------------- |
@@ -185,16 +167,12 @@ Description:
 
 # FxDepositCounter
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | Fx deposit counter Id            |
 | current                    | BigInt!  | Current number of FxDeposits     |
 
 # FxWithdraw
-
-Description: 
 
 | Field                      | Type     | Description                               |
 | -------------------------- | -------- | ----------------------------------------- |
@@ -212,16 +190,12 @@ Description:
 
 # FxWithdrawCounter
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | Fx withdraw counter Id           |
 | current                    | BigInt!  | Current number of FxWithdrawals  |
 
 # Validator
-
-Description: 
 
 | Field                      | Type     | Description                                                      |
 | -------------------------- | -------- | ---------------------------------------------------------------- |
@@ -245,8 +219,6 @@ Description:
 
 # StakeUpdate
 
-Description: 
-
 | Field                      | Type     | Description                       |
 | -------------------------- | -------- | --------------------------------- |
 | id                         | ID!      | Stake update Id                   |
@@ -259,8 +231,6 @@ Description:
 
 # GlobalDelegatorCounter
 
-Description: 
-
 | Field                      | Type     | Description                                                                    |
 | -------------------------- | -------- | ------------------------------------------------------------------------------ |
 | id                         | ID!      | Global delegator counter Id                                                    |
@@ -268,16 +238,12 @@ Description:
 
 # GlobalPlasmaExitCounter
 
-Description: 
-
 | Field                      | Type     | Description                                                                    |
 | -------------------------- | -------- | ------------------------------------------------------------------------------ |
 | id                         | ID!      | Global plasma exit counter                                                     |
 | current                    | BigInt!  | Count of the plasma exits and till where have the process exits been processed |
 
 # Delegator
-
-Description: 
 
 | Field                      | Type     | Description                                                                 |
 | -------------------------- | -------- | --------------------------------------------------------------------------- |
@@ -293,8 +259,6 @@ Description:
 
 # Topup 
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | Heimdall topup Id                |
@@ -303,8 +267,6 @@ Description:
 | withdrawAmount             | BigInt!  | Amount withdrawn                 |
 
 # StakingNFTTransfer
-
-Description: 
 
 | Field                      | Type      | Description                         |
 | -------------------------- | --------- | ----------------------------------- |
@@ -315,8 +277,6 @@ Description:
 | transactionHashes          | [Bytes!]! | Array of transaction hashes         |
 
 # DelegatorUnbond
-
-Description: 
 
 | Field                      | Type     | Description                                |
 | -------------------------- | -------- | ------------------------------------------ |
@@ -335,8 +295,6 @@ Description:
 
 # MaticTransfer
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | Matic transfer Id                |
@@ -350,16 +308,12 @@ Description:
 
 # GlobalDelegationCounter
 
-Description: 
-
 | Field                      | Type     | Description                      |
 | -------------------------- | -------- | -------------------------------- |
 | id                         | ID!      | Delegation counter Id            |
 | current                    | BigInt!  | Current number of delegations    |
 
 # Delegation
-
-Description: 
 
 | Field                      | Type     | Description                                     |
 | -------------------------- | -------- | ----------------------------------------------- |
