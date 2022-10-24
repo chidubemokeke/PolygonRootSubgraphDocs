@@ -1,5 +1,5 @@
 ---
-id: Subgraph entities
+id: graph-entities
 title: Entity descriptions
 sidebar_label: Using Polygon's root subgraph
 description: Learn how to use Polygon's subgraph for data
